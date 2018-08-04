@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('background-1.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #242729;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.background-image {
+    position: fixed;
+    top: 0; left: 0; right: -16px; bottom: 0;
+	background-image: url('background-1.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+	border-radius: 500px;
+    border: 6px solid transparent;
+    background-clip: padding-box;
+	transition: all 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+	border-radius: 500px;
+    border: 6px solid transparent;
+    background-clip: padding-box;
+}
+
+.page-wrapper {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 18px;
+    position: relative;
+}
+
+a {
+    color: cornflowerblue;
+}
+
+.info {
+    color: white;
+    border-radius: 2px;
+    background: cornflowerblue;
+    padding: 12px 16px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.info.success {
+    background: mediumseagreen;
+}
+
+.error {
+    font-weight: 700;
+    color: red;
+}
+
+/* ---------------------------------------------- Logo Graphic ---------------------------------------------- */
+.logo-area {
+    position: absolute;
+    top: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.logo-area .logo {
+    width: 100%;
+    max-width: 550px;
+}
+/* ---------------------------------------------- IE Navigation Menu ---------------------------------------------- */
+.IE-compatible-menu {
+    margin: 0;
+    margin-top: 4px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.IE-compatible-menu li {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.IE-compatible-menu li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: 0.2s color ease;
+}
+
+.IE-compatible-menu li a:hover {
+    color: white;
+}
+
+.IE-compatible-menu li::before {
+    content: '⬥ ';
+}
+
+.IE-compatible-menu li:last-child::after {
+    content: ' ⬥';
+}
+
+/* ---------------------------------------------- Main Site Emblems ---------------------------------------------- */
+
+.site-emblem {
+    position: relative;
+    top: 80px;
+    text-align: left;
+    width: 100%;
+}
+
+.site-emblem .emblem {
+    padding: 10;
+    max-width: 350px;
+    margin-left: 200px;
+    transition: transform .5s;
+}
+
+.site-emblem .emblem2 {
+    padding: 10;
+    max-width: 300px;
+    margin-left: 320px;
+    transition: transform .5s;
+
+}
+.site-emblem img {
+    transition: transform .5s;
+}
+
+.emblem:hover img{
+    transition: transform .5s;
+    transform: scale(1.1);
+}
+
+/*---------------------------------------------- Footer ---------------------------------------------- */
+footer {
+    padding: 0 18px;
+    font-size: 14px;
+    text-align: center;
+    background: black;
+    overflow: hidden;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+/* Screen too Short Scaling */
+@media screen and (max-height: 800px) {
+    body {
+        background-attachment: fixed;
+    }
+
+    .page-wrapper {
+        height: unset;
+        overflow: visible;
+    }
+
+    .logo-area {
+        position: relative;
+        margin-top: 24px;
+        top: unset;
+        text-align: center;
+        width: 100%;
+    }
+
+
+/* ---------------------------------------------- Mobile Device Scaling ---------------------------------------------- */
+@media screen and (max-width: 800px) {
+
+    body {
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-wrapper {
+        height: unset;
+        overflow: visible;
+        flex-grow: 1;
+    }
+
+    footer {
+        flex-shrink: 0;
+    }
+
+    .logo-area {
+        position: relative;
+        margin-top: 24px;
+        top: unset;
+        text-align: center;
+        width: 100%;
+    }
+
+/*------------------------------------------Main Site Emblems---------------------------------------------*/
+
+.site-emblem {
+    position: relative;
+    top: 80px;
+    text-align: left;
+    width: 100%;
+}
+
+.site-emblem .emblem {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 200px
+}
+
+.site-emblem .emblem2 {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 160px
+}
+

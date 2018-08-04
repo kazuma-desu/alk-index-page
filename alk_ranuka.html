@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome to anime.lk</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+        <!-- <script src="main.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js"></script>
+        <style>
+        .outer {
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .item {
+        width: 40%;
+        flex-grow: 1;
+        flex-basis: auto;
+        }
+        .ds-forum {
+        background-color: #3e435a;
+        }
+        .img {
+        width: 100%;
+        }
+        </style>
+    </head>
+    <body>
+        <div data-style="display: flex;" class="outer">
+            <div class="fb-forum item">
+                <div class="img"><img src="https://forum.anime.lk/uploads/default/original/2X/1/1f3ee9033871c0e92710e6f23a1f692fa5f4ba70.png"></div>
+                <div class="text"><a href="https://www.facebook.com/groups/AnimeMangaAddictsSriLanka">Anime/Manga Addicts Facebook Group (recommended)</a></div>
+            </div>
+            <div class="ds-forum item">
+                <div class="img"><img src="https://forum.anime.lk/uploads/default/original/2X/c/cf618889a362bf6db067a59d1cd06babe66f1906.png"></div>
+                <div class="text"><a href="https://forum.anime.lk">anime.lk Forum</a></div>
+            </div>
+        </div>
+        <script>flexibility(document.documentElement);</script>
+    </body>
+</html>
