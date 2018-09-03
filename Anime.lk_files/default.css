@@ -7,7 +7,8 @@ html {
 }
 
 body {
-    background-image: url('background-1.jpg');
+    background-image: url('background-4.jpg');
+    background-color: rgba(0, 0, 0, -.8);
     background-size: cover;
     margin: 0;
     height: 100%;
@@ -17,13 +18,15 @@ body {
     overflow-x: hidden;
 }
 
+
 .background-image {
     position: fixed;
     top: 0; left: 0; right: -16px; bottom: 0;
-	background-image: url('background-1.jpg');
+	background-image: url('background-4.jpg');
 	background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+    border-top: #f4f4f4 5px solid;
 }
 
 ::-webkit-scrollbar {
@@ -46,65 +49,53 @@ body {
     background-clip: padding-box;
 }
 
-.page-wrapper {
-    height: 100vh;
-    overflow: hidden;
-    margin: 0 18px;
-    position: relative;
-}
-
-a {
-    color: cornflowerblue;
-}
-
-.info {
-    color: white;
-    border-radius: 2px;
-    background: cornflowerblue;
-    padding: 12px 16px;
-    display: block;
-    margin-bottom: 12px;
-}
-
-.info.success {
-    background: mediumseagreen;
-}
-
-.error {
-    font-weight: 700;
-    color: red;
-}
-
-/* ---------------------------------------------- Logo Graphic ---------------------------------------------- */
 .logo-area {
-    position: absolute;
-    top: 24px;
+    position: relative;
+    top: 16px;
     text-align: center;
     width: 100%;
+    color: #f4f4f4;
+    font-size: 90%;
+    padding-bottom: 22px;
 }
 
 .logo-area .logo {
     width: 100%;
-    max-width: 550px;
+    max-width: 400px;
 }
-/* ---------------------------------------------- IE Navigation Menu ---------------------------------------------- */
+/*Global Style Settings*/
+
+.contaner{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
 .IE-compatible-menu {
     margin: 0;
     margin-top: 4px;
     padding: 0;
     list-style: none;
     text-align: center;
+    font-weight: bold;
 }
 
 .IE-compatible-menu li {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
+    margin-top: 9px;
+    font-size: 90%;
 }
 
 .IE-compatible-menu li a {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(199, 199, 199, 0.863);
     text-decoration: none;
-    transition: 0.2s color ease;
+    transition: 0.4s color ease;
 }
 
 .IE-compatible-menu li a:hover {
@@ -119,39 +110,51 @@ a {
     content: ' ⬥';
 }
 
-/* ---------------------------------------------- Main Site Emblems ---------------------------------------------- */
+.menu-back {
+    background: rgba(44, 44, 44, 0.8);
+    min-height: 40px;
+}
 
-.site-emblem {
+.button_1{
+    height: 58px;
+    width: 158px;
+    background: rgb(247, 193, 18);
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #f4f4f4;
+    font-weight: bolder;
+    font-size: 120%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#boxes{
+    margin-top: 2%;
+}
+
+#boxes .box{
+    margin-bottom: 2%;
     position: relative;
-    top: 80px;
-    text-align: left;
-    width: 100%;
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: 2%;
 }
 
-.site-emblem .emblem {
-    padding: 10;
-    max-width: 350px;
-    margin-left: 200px;
-    transition: transform .5s;
+#boxes .box #box-img-1{
+    max-width: 60%;
 }
 
-.site-emblem .emblem2 {
-    padding: 10;
-    max-width: 300px;
-    margin-left: 320px;
-    transition: transform .5s;
-
-}
-.site-emblem img {
-    transition: transform .5s;
+#boxes .box #box-img-2{
+    max-width: 51.6%;
+    margin-top: 23px;
 }
 
-.emblem:hover img{
-    transition: transform .5s;
-    transform: scale(1.1);
+#boxes .box h3{
+    text-align: center;
+    color: white;
 }
 
-/*---------------------------------------------- Footer ---------------------------------------------- */
 footer {
     padding: 0 18px;
     font-size: 14px;
@@ -159,77 +162,88 @@ footer {
     background: black;
     overflow: hidden;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
 }
 
 footer a {
     color: white;
 }
 
-/* Screen too Short Scaling */
-@media screen and (max-height: 800px) {
-    body {
-        background-attachment: fixed;
-    }
 
-    .page-wrapper {
-        height: unset;
-        overflow: visible;
-    }
+/* Resposive Design CCS*/
 
-    .logo-area {
+@media(max-width: 580px){
+    #boxes{
+        margin-top: 12px;
+    }
+    
+    #boxes .box{
         position: relative;
-        margin-top: 24px;
-        top: unset;
+        float: none;
         text-align: center;
         width: 100%;
+        padding: 20px;
     }
-
-
-/* ---------------------------------------------- Mobile Device Scaling ---------------------------------------------- */
-@media screen and (max-width: 800px) {
-
-    body {
-        background-attachment: fixed;
-        display: flex;
-        flex-direction: column;
+    
+    #boxes .box #box-img-1{
+        max-width: 300px;
     }
-
-    .page-wrapper {
-        height: unset;
-        overflow: visible;
-        flex-grow: 1;
+    
+    #boxes .box #box-img-2{
+        max-width: 262px;
+        margin-top: 23px;
+        margin-left: 20px;
     }
+    
+}
 
+@media(max-width: 380px){
+    #boxes .box{
+        position: relative;
+        float: none;
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+    }
+    
+    #boxes .box #box-img-1{
+        max-width: 250px;
+    }
+    
+    #boxes .box #box-img-2{
+        max-width: 200px;
+        margin-top: 23px;
+        margin-left: 20px;
+    }
+    .button_1{
+        height: 38px;
+        width: 148px;
+        background: rgb(247, 193, 18);
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #f4f4f4;
+        font-weight: bolder;
+        font-size: 100%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #boxes .box h3{
+        text-align: center;
+        color: white;
+        font-size: 90%;
+    }
+    
     footer {
-        flex-shrink: 0;
-    }
-
-    .logo-area {
-        position: relative;
-        margin-top: 24px;
-        top: unset;
+        margin-top: 20px;
+        padding: 0 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
         text-align: center;
-        width: 100%;
+        background: black;
+        overflow: hidden;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
-/*------------------------------------------Main Site Emblems---------------------------------------------*/
-
-.site-emblem {
-    position: relative;
-    top: 80px;
-    text-align: left;
-    width: 100%;
 }
-
-.site-emblem .emblem {
-    width: 100%;
-    max-width: 350px;
-    margin-left: 200px
-}
-
-.site-emblem .emblem2 {
-    width: 100%;
-    max-width: 300px;
-    margin-left: 160px
-}
-
